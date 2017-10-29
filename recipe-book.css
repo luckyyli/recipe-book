@@ -1,0 +1,353 @@
+/**************** reset CSS ****************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/************** end reset **********/
+
+
+body{
+	line-height: 1.5;
+	background-color: white;
+	font-family: Arial, sans-serif;
+	color: rgba(84,36,28,1.0);
+	font-size: 110%;
+	margin-top: 70px;
+}
+
+
+img{
+	margin-top: -40px;
+	width: 40%;
+	height: auto;
+	float: right;
+	padding:30px;
+}
+
+nav{
+	padding: 2% 1% 0% 1%;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	margin:auto; 
+	z-index:100000; 
+	background-color: white;
+	/*background-color: rgba(236,228,197,1.0);*/
+	height: 50px;
+}
+
+
+ul{
+	padding: 0px 30px;
+}
+
+ol{
+	padding: 10px 30px;
+	list-style-type: decimal;
+}
+
+h1{
+	font-size: 160%;
+	padding-top: 10px;
+	line-height: 2;
+	font-weight: 600;
+}
+
+h1 a{
+	padding-top: 10px;
+}
+
+h2{
+	font-size: 150%;
+	line-height: 3;
+	font-weight: 600;
+}
+
+h3{
+	font-size: 100%;
+	line-height: 2;
+	font-weight: 600;
+}
+
+p{
+	padding: 0% 2% 5% 2%;
+
+}
+
+p #author, p a{
+	line-height: 1;
+}
+
+a{
+	font-size: 110%;
+}
+
+a:link, a:visited{
+	text-decoration: none;
+	color: rgba(111,104,37,1.0);
+	font-family: times;
+}
+
+a:focus, a:hover, a:active{
+	color: rgba(111,104,37,.6);
+	text-decoration: none;
+}
+
+
+#main-content{
+	margin: auto;
+	width: 100%;
+	clear: both;
+}
+
+/* nav styling */
+
+nav ul{
+	float: right;
+	margin-top: -15px;
+}
+
+nav ul li{
+	float: left;
+	text-align: center;
+}
+
+nav ul li a{
+	display: inline;
+}
+
+
+nav li{
+	display: inline;
+	padding: 5px 10px;
+	margin: 10px;	
+}
+
+#nav-logo{
+	float: left;
+	width: 235px;
+	margin-top: -30px;
+}
+
+
+/* intro  section */
+
+
+#intro{
+	background-image: url(images/indexHero1.jpg);
+	height: 700px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#intro h2{
+	text-align: center;
+	padding-top: 250px;
+	font-size: 230%;
+	line-height: 1.5;
+}
+
+#intro h2 span{
+	font-size: 160%;
+}
+
+#intro div{
+	text-align: center;
+	margin-top: 55px;
+}
+
+#intro div a{
+	width: 100px;
+	padding: 10px;
+	border-radius: 15px;
+	border: 2px solid rgba(111,104,37,1.0);
+}
+
+/* contributor section */
+
+#contributor{
+	padding-top: 130px;
+	height: 510px;
+	background-color: rgba(236,228,197,1.0);
+}
+
+#contributor h2, #featured-recipes h2, #featured-tip h2{
+	margin-left: 45px;
+}
+
+#contributors-img img, #about-img img{
+	padding: 5%;
+	margin:auto;
+	width: 50%;
+	height: auto;
+}
+
+/* featured recipes section */
+
+
+#featured-recipes{
+	padding-top: 60px;
+	
+	height: 550px;
+}
+
+.recipe-img{
+	background-size: cover;
+	background-position: center;
+	height: 350px;
+	background-repeat: no-repeat;
+	width: 44%;
+	float: left;
+	margin: 3%;
+	font-size: 180%;
+}
+
+.recipe-img:nth-child(2){
+	background-image: url(images/crockpot-chicken-noodle-soup.jpg);
+	
+}
+
+.recipe-img:nth-child(3){
+	background-image: url(images/banana-bread.jpg);
+}
+
+.recipe-img div{
+	text-align: center;
+	margin-top: 100px;
+	background-color: white;
+	opacity: .8;
+}
+
+#featured-recipes a:link div, #featured-recipes a:visited div{
+	visibility: hidden;
+}
+
+#featured-recipes a:focus, #featured-recipes a:hover, #featured-recipes a:active{
+	color: rgba(111,104,37,1.0);
+}
+
+#featured-recipes a:focus div, #featured-recipes a:hover div, #featured-recipes a:active div{
+	visibility: visible;
+}
+
+/* featured tip section */
+
+
+#featured-tip{
+	padding-top: 60px;
+	height: 530px;
+	background-color: rgba(111,104,37,.2);
+}
+
+#tip-container{
+	font-size: 120%;
+	padding: 5% 15% 3% 15%;
+	line-height: 1.5;
+}
+
+#tip-container a{
+	font-size: 100%;
+}
+
+
+/* image styling for non-index pages */
+
+.image-group div{	
+	margin: auto;
+	min-width: 400px;
+}
+
+.image-and-span span{
+	display: inline-block;
+	font-size: 120%;
+	margin: auto;
+}
+
+.image-and-span{
+	text-align: center;
+	width: 49%;
+	height: auto;
+	float: left;
+}
+
+.image-and-span img{
+	width: 90%;
+	margin: auto;
+}
+
+.quote{
+	font-size: 130%;
+	padding: 5% 15% 3% 15%;
+	line-height: 1.5;
+}
+
+.quote-speaker{
+	text-align: right;
+	font-size: 125%;
+	padding-right: 15%;
+} 
+
+.more-link{
+	text-align: right;
+	padding-right: 30px;
+	display: block;
+}
+
+
+
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+
+
+
+

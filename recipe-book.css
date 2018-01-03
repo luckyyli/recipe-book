@@ -59,27 +59,9 @@ body{
 	margin-top: 70px;
 }
 
-
-img{
-	margin-top: -40px;
-	width: 40%;
-	height: auto;
-	float: right;
-	padding:30px;
+section{
+	margin-bottom: 2%;
 }
-
-nav{
-	padding: 2% 1% 0% 1%;
-	position: fixed;
-	top: 0px;
-	width: 100%;
-	margin:auto; 
-	z-index:100000; 
-	background-color: white;
-	/*background-color: rgba(236,228,197,1.0);*/
-	height: 50px;
-}
-
 
 ul{
 	padding: 0px 30px;
@@ -114,7 +96,7 @@ h3{
 }
 
 p{
-	padding: 0% 2% 5% 2%;
+	padding: 0% 2% 1% 2%;
 
 }
 
@@ -138,41 +120,74 @@ a:focus, a:hover, a:active{
 }
 
 
-#main-content{
+#main-home{
 	margin: auto;
 	width: 100%;
 	clear: both;
 }
 
+.main-content{
+	margin: 1em 5% 3em 5%;
+}
+
+article img{
+	width: 40%;
+	float: right;
+	padding: 0em 0em 1em 1em;
+}
+
+article p{
+	width: 50%;
+}
+
 /* nav styling */
+nav{
+	padding: 1%;
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	margin:auto; 
+	z-index:100000; 
+	background-color: rgba(236,228,197,1.0);
+	height: 50px;
+}
 
 nav ul{
 	float: right;
-	margin-top: -15px;
 }
-
-nav ul li{
-	float: left;
-	text-align: center;
-}
-
-nav ul li a{
-	display: inline;
-}
-
 
 nav li{
+	float: left;
+	text-align: center;
 	display: inline;
 	padding: 5px 10px;
 	margin: 10px;	
 }
 
-#nav-logo{
-	float: left;
-	width: 235px;
-	margin-top: -30px;
+nav li a{
+	display: inline;
+	padding: 0px .5em .5em .5em;
 }
 
+
+#nav-logo{
+	float: left;
+	margin-left: 25px;
+}
+
+nav li a:link,nav li a:visited {
+	border-bottom: 3px solid transparent; 
+}
+
+
+nav li a:focus, nav li a:hover, nav li a:active {
+	color: rgba(111,104,37,.6);
+	border-color: rgba(111,104,37,.4);
+}
+
+nav li a {
+	transition: .7s all;
+}
 
 /* intro  section */
 
@@ -182,6 +197,8 @@ nav li{
 	height: 700px;
 	background-size: cover;
 	background-repeat: no-repeat;
+	margin-bottom: -5px;
+	margin-top: -2px;
 }
 
 #intro h2{
@@ -246,6 +263,7 @@ nav li{
 	font-size: 180%;
 }
 
+
 .recipe-img:nth-child(2){
 	background-image: url(images/crockpot-chicken-noodle-soup.jpg);
 	
@@ -294,30 +312,7 @@ nav li{
 }
 
 
-/* image styling for non-index pages */
-
-.image-group div{	
-	margin: auto;
-	min-width: 400px;
-}
-
-.image-and-span span{
-	display: inline-block;
-	font-size: 120%;
-	margin: auto;
-}
-
-.image-and-span{
-	text-align: center;
-	width: 49%;
-	height: auto;
-	float: left;
-}
-
-.image-and-span img{
-	width: 90%;
-	margin: auto;
-}
+/* contributor quote section */
 
 .quote{
 	font-size: 130%;
@@ -337,17 +332,220 @@ nav li{
 	display: block;
 }
 
+/*		thumbnail grid 	*/
+.thumbnail-grid {
+  margin-bottom: 3em;
+  float: left;
+}
 
+/*	recipes page uses .thumbnail-container 	*/
 
-.clearfix:after { 
-   content: "."; 
-   visibility: hidden; 
-   display: block; 
-   height: 0; 
-   clear: both;
+.thumbnail-grid .thumbnail-container{
+	width: 47%;
+	float: left;
+	margin-right: 6%;
+	margin-bottom: 4em;
+	text-align: center;
+}
+
+.thumbnail-grid div:nth-child(2n) {
+  margin-right: 0;
+}
+
+.thumbnail-grid div:nth-child(2n+1) {
+  clear:left;
+}
+
+/*	tips page uses .li 	*/
+
+.thumbnail-grid li {
+	float: left;
+	margin-right: 1.33%;
+	margin-bottom: 1em;
+	width: 24%;
+}
+
+.thumbnail-grid li:nth-child(4n) {
+	margin-right: 0;
+}
+
+.thumbnail-grid li:nth-child(4n+1) {
+	clear: left;
+}
+
+.thumbnail-grid img{
+	width: 100%;
+}
+
+.thumbnail-grid figure{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+
+}
+
+.thumbnail-grid figcaption{
+	position: relative;
+}
+.thumbnail-grid figcaption p{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+
+}
+
+.thumbnail {
+	position: relative;	/* Set the container for the images */
+	width: 100%;
+}
+.thumbnail-grid img{
+	max-width: 100%;
+}
+
+.thumbnail .overlay {
+	/* Set up the overlay text and background */
+	background-color: rgba(84,36,28,1.0);
+	color: white;
+	font-size: 180%;
+	padding-top: 40%;
+	text-align: center;
+
+	/* Make the overlay fill its container */
+	position: absolute;
+	width: 100%;
+	height: 58.5%;
+	
+	/* Hide the overlay */
+	opacity: 0;
+}
+
+/* Show the overlay on hover */
+.thumbnail-grid a:hover .overlay {
+	opacity: 1;
+}
+
+/* Make a smooth transition for the overlay */
+.thumbnail-grid a .overlay {
+	transition: 1s all;
+}
+
+/*	recipes page 	*/
+
+#recipes-hero{
+	background-image: url(images/recipesHero.jpeg);
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 250px;
+	margin-bottom: 4em;
+	margin-top: -5px;
+}
+
+#recipes-hero h2{
+	position: absolute;
+	top: 5em;
+	left: 4em;
+	color: white;
+	font-size: 180%;
+}
+
+/*	tips page 	*/
+
+#tips-hero{
+	background-image: url(images/tipsHero.jpg);
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 250px;
+	margin-bottom: 4em;
+	margin-top: -5px;
+}
+
+#tips-hero h2{
+	position: absolute;
+	font-size: 180%;
+	top: 18%;
+	left: 19%;
+}
+
+/*	contributors page 	*/
+
+#contributors-hero{
+	background-image: url(images/contributorsHero.jpg);
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 250px;
+	margin-bottom: 4em;
+	margin-top: -5px;
+}
+
+#contributors-hero h2{
+	position: absolute;
+	font-size: 180%;
+	top: 5em;
+	left: 43%;
+}
+
+.contributors p:first-letter{
+	font-size: 180%;
+	line-height: 1;
+}
+
+/*	about page 	*/
+
+#about-hero{
+	background-image: url(images/aboutHero.jpg);
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 250px;
+	margin-bottom: 4.5em;
+	margin-top: -5px;
+}
+
+#about-hero h2{
+	position: absolute;
+	font-size: 180%;
+	top: 5em;
+	left: 46%;
+	color: white;
+}
+
+.about p:first-letter{
+	font-size: 180%;
+	line-height: 1;
+}
+
+/* 	prev/next recipe */
+.next-recipe, .next-tip{
+	text-align: right;
+	padding-top: 55px;	
+	float: right;
+	margin-bottom: 4em;
+}
+
+.prev-recipe, .prev-tip{
+	text-align: left;
+	padding-top: 55px;	
+	float: left;
+	margin-bottom: 4em;
+}
+
+.next-recipe a, .prev-recipe a, .next-tip a, .prev-tip a{
+	width: 100px;
+	padding: 10px;
+	border-radius: 15px;
+	background-color: rgba(111,104,37,1.0);
+	color: white;
+	transition: .6s all;
 }
 
 
+.next-recipe a:hover, .next-recipe a:focus, .prev-recipe a:hover, .prev-recipe a:focus, .next-tip a:hover, .next-tip a:focus, .prev-tip a:hover, .prev-tip a:focus{
+	background-color: rgba(111,104,37,.6);
+}
 
-
-
+.prev-next{
+	clear: both;
+}
